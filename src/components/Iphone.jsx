@@ -1,33 +1,29 @@
 
-import React, { useEffect, useRef } from 'react'
-import { useGLTF, useTexture } from '@react-three/drei'
-import * as THREE from 'three'
+import * as THREE from 'three';
+import React, { useEffect, useRef } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
 
 function Iphone(props) {
-  
-  const { nodes, materials } = useGLTF('/models/scene.glb')
+  const { nodes, materials } = useGLTF("/models/scene.glb");
 
   const texture = useTexture(props.item.img);
 
-  useEffect(() => {
-    Object.entries(materials).map((material) => {
-      // these are the material names that can't be changed color
-      if (
-        material[0] !== "zFdeDaGNRwzccye" &&
-        material[0] !== "ujsvqBWRMnqdwPx" &&
-        material[0] !== "hUlRcbieVuIiOXG" &&
-        material[0] !== "jlzuBkUzuJqgiAK" &&
-        material[0] !== "xNrofRCqOXXHVZt"
-      ) {
-        material[1].color = new THREE.Color(props.item.color[0]);
-      }
-      material[1].needsUpdate = true;
-    });
-  }, [materials, props.item]);
-
-
-
-
+    useEffect(() => {
+      Object.entries(materials).map((material) => {
+        // these are the material names that can't be changed color
+        if (
+          material[0] !== "zFdeDaGNRwzccye" &&
+          material[0] !== "ujsvqBWRMnqdwPx" &&
+          material[0] !== "hUlRcbieVuIiOXG" &&
+          material[0] !== "jlzuBkUzuJqgiAK" &&
+          material[0] !== "xNrofRCqOXXHVZt"
+        ) {
+          material[1].color = new THREE.Color(props.item.color[0]);
+        }
+        material[1].needsUpdate = true;
+      });
+    }, [materials, props.item]);
+  
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -36,7 +32,6 @@ function Iphone(props) {
         geometry={nodes.ttmRoLdJipiIOmf.geometry}
         material={materials.hUlRcbieVuIiOXG}
         scale={0.01}
-        userData={{ name: 'ttmRoLdJipiIOmf' }}
       />
       <mesh
         castShadow
@@ -44,7 +39,6 @@ function Iphone(props) {
         geometry={nodes.DjsDkGiopeiEJZK.geometry}
         material={materials.PaletteMaterial001}
         scale={0.01}
-        userData={{ name: 'DjsDkGiopeiEJZK' }}
       />
       <mesh
         castShadow
@@ -52,7 +46,6 @@ function Iphone(props) {
         geometry={nodes.buRWvyqhBBgcJFo.geometry}
         material={materials.PaletteMaterial002}
         scale={0.01}
-        userData={{ name: 'buRWvyqhBBgcJFo' }}
       />
       <mesh
         castShadow
@@ -60,7 +53,6 @@ function Iphone(props) {
         geometry={nodes.MrMmlCAsAxJpYqQ_0.geometry}
         material={materials.dxCVrUCvYhjVxqy}
         scale={0.01}
-        userData={{ name: 'MrMmlCAsAxJpYqQ_0' }}
       />
       <mesh
         castShadow
@@ -68,7 +60,6 @@ function Iphone(props) {
         geometry={nodes.wqbHSzWaUxBCwxY_0.geometry}
         material={materials.MHFGNLrDQbTNima}
         scale={0.01}
-        userData={{ name: 'wqbHSzWaUxBCwxY_0' }}
       />
       <mesh
         castShadow
@@ -76,7 +67,6 @@ function Iphone(props) {
         geometry={nodes.QvGDcbDApaGssma.geometry}
         material={materials.kUhjpatHUvkBwfM}
         scale={0.01}
-        userData={{ name: 'QvGDcbDApaGssma' }}
       />
       <mesh
         castShadow
@@ -84,7 +74,6 @@ function Iphone(props) {
         geometry={nodes.vFwJFNASGvEHWhs.geometry}
         material={materials.RJoymvEsaIItifI}
         scale={0.01}
-        userData={{ name: 'vFwJFNASGvEHWhs' }}
       />
       <mesh
         castShadow
@@ -92,7 +81,6 @@ function Iphone(props) {
         geometry={nodes.evAxFwhaQUwXuua.geometry}
         material={materials.KSIxMqttXxxmOYl}
         scale={0.01}
-        userData={{ name: 'evAxFwhaQUwXuua' }}
       />
       <mesh
         castShadow
@@ -100,7 +88,6 @@ function Iphone(props) {
         geometry={nodes.USxQiqZgxHbRvqB.geometry}
         material={materials.mcPrzcBUcdqUybC}
         scale={0.01}
-        userData={{ name: 'USxQiqZgxHbRvqB' }}
       />
       <mesh
         castShadow
@@ -108,7 +95,6 @@ function Iphone(props) {
         geometry={nodes.TvgBVmqNmSrFVfW.geometry}
         material={materials.pIhYLPqiSQOZTjn}
         scale={0.01}
-        userData={{ name: 'TvgBVmqNmSrFVfW' }}
       />
       <mesh
         castShadow
@@ -116,7 +102,6 @@ function Iphone(props) {
         geometry={nodes.GuYJryuYunhpphO.geometry}
         material={materials.eShKpuMNVJTRrgg}
         scale={0.01}
-        userData={{ name: 'GuYJryuYunhpphO' }}
       />
       <mesh
         castShadow
@@ -124,7 +109,6 @@ function Iphone(props) {
         geometry={nodes.pvdHknDTGDzVpwc.geometry}
         material={materials.xdyiJLYTYRfJffH}
         scale={0.01}
-        userData={{ name: 'pvdHknDTGDzVpwc' }}
       />
       <mesh
         castShadow
@@ -132,7 +116,6 @@ function Iphone(props) {
         geometry={nodes.CfghdUoyzvwzIum.geometry}
         material={materials.jpGaQNgTtEGkTfo}
         scale={0.01}
-        userData={{ name: 'CfghdUoyzvwzIum' }}
       />
       <mesh
         castShadow
@@ -140,7 +123,6 @@ function Iphone(props) {
         geometry={nodes.DjdhycfQYjKMDyn.geometry}
         material={materials.ujsvqBWRMnqdwPx}
         scale={0.01}
-        userData={{ name: 'DjdhycfQYjKMDyn' }}
       />
       <mesh
         castShadow
@@ -148,7 +130,6 @@ function Iphone(props) {
         geometry={nodes.usFLmqcyrnltBUr.geometry}
         material={materials.sxNzrmuTqVeaXdg}
         scale={0.01}
-        userData={{ name: 'usFLmqcyrnltBUr' }}
       />
       <mesh
         castShadow
@@ -156,15 +137,15 @@ function Iphone(props) {
         geometry={nodes.xXDHkMplTIDAXLN.geometry}
         material={materials.pIJKfZsazmcpEiU}
         scale={0.01}
-        userData={{ name: 'xXDHkMplTIDAXLN' }}
-      />
+      >
+        <meshStandardMaterial roughness={1} map={texture} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.vELORlCJixqPHsZ.geometry}
         material={materials.zFdeDaGNRwzccye}
         scale={0.01}
-        userData={{ name: 'vELORlCJixqPHsZ' }}
       />
       <mesh
         castShadow
@@ -172,7 +153,6 @@ function Iphone(props) {
         geometry={nodes.EbQGKrWAqhBHiMv.geometry}
         material={materials.TBLSREBUyLMVtJa}
         scale={0.01}
-        userData={{ name: 'EbQGKrWAqhBHiMv' }}
       />
       <mesh
         castShadow
@@ -180,7 +160,6 @@ function Iphone(props) {
         geometry={nodes.EddVrWkqZTlvmci.geometry}
         material={materials.xNrofRCqOXXHVZt}
         scale={0.01}
-        userData={{ name: 'EddVrWkqZTlvmci' }}
       />
       <mesh
         castShadow
@@ -188,7 +167,6 @@ function Iphone(props) {
         geometry={nodes.KSWlaxBcnPDpFCs.geometry}
         material={materials.yQQySPTfbEJufve}
         scale={0.01}
-        userData={{ name: 'KSWlaxBcnPDpFCs' }}
       />
       <mesh
         castShadow
@@ -196,7 +174,6 @@ function Iphone(props) {
         geometry={nodes.TakBsdEjEytCAMK.geometry}
         material={materials.PaletteMaterial003}
         scale={0.01}
-        userData={{ name: 'TakBsdEjEytCAMK' }}
       />
       <mesh
         castShadow
@@ -204,7 +181,6 @@ function Iphone(props) {
         geometry={nodes.IykfmVvLplTsTEW.geometry}
         material={materials.PaletteMaterial004}
         scale={0.01}
-        userData={{ name: 'IykfmVvLplTsTEW' }}
       />
       <mesh
         castShadow
@@ -212,7 +188,6 @@ function Iphone(props) {
         geometry={nodes.wLfSXtbwRlBrwof.geometry}
         material={materials.oZRkkORNzkufnGD}
         scale={0.01}
-        userData={{ name: 'wLfSXtbwRlBrwof' }}
       />
       <mesh
         castShadow
@@ -220,7 +195,6 @@ function Iphone(props) {
         geometry={nodes.WJwwVjsahIXbJpU.geometry}
         material={materials.yhcAXNGcJWCqtIS}
         scale={0.01}
-        userData={{ name: 'WJwwVjsahIXbJpU' }}
       />
       <mesh
         castShadow
@@ -228,7 +202,6 @@ function Iphone(props) {
         geometry={nodes.YfrJNXgMvGOAfzz.geometry}
         material={materials.bCgzXjHOanGdTFV}
         scale={0.01}
-        userData={{ name: 'YfrJNXgMvGOAfzz' }}
       />
       <mesh
         castShadow
@@ -236,7 +209,6 @@ function Iphone(props) {
         geometry={nodes.DCLCbjzqejuvsqH.geometry}
         material={materials.vhaEJjZoqGtyLdo}
         scale={0.01}
-        userData={{ name: 'DCLCbjzqejuvsqH' }}
       />
       <mesh
         castShadow
@@ -244,7 +216,6 @@ function Iphone(props) {
         geometry={nodes.CdalkzDVnwgdEhS.geometry}
         material={materials.jlzuBkUzuJqgiAK}
         scale={0.01}
-        userData={{ name: 'CdalkzDVnwgdEhS' }}
       />
       <mesh
         castShadow
@@ -252,7 +223,6 @@ function Iphone(props) {
         geometry={nodes.NtjcIgolNGgYlCg.geometry}
         material={materials.PpwUTnTFZJXxCoE}
         scale={0.01}
-        userData={{ name: 'NtjcIgolNGgYlCg' }}
       />
       <mesh
         castShadow
@@ -260,7 +230,6 @@ function Iphone(props) {
         geometry={nodes.pXBNoLiaMwsDHRF.geometry}
         material={materials.yiDkEwDSyEhavuP}
         scale={0.01}
-        userData={{ name: 'pXBNoLiaMwsDHRF' }}
       />
       <mesh
         castShadow
@@ -268,7 +237,6 @@ function Iphone(props) {
         geometry={nodes.IkoiNqATMVoZFKD.geometry}
         material={materials.hiVunnLeAHkwGEo}
         scale={0.01}
-        userData={{ name: 'IkoiNqATMVoZFKD' }}
       />
       <mesh
         castShadow
@@ -276,12 +244,11 @@ function Iphone(props) {
         geometry={nodes.rqgRAGHOwnuBypi.geometry}
         material={materials.HGhEhpqSBZRnjHC}
         scale={0.01}
-        userData={{ name: 'rqgRAGHOwnuBypi' }}
       />
     </group>
-  )
+  );
 }
 
 export default Iphone;
 
-useGLTF.preload('/models/scene.glb')
+useGLTF.preload("/models/scene.glb");
